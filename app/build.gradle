@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.zwiftboard.android'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.zwiftboard.android'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // Clé de signature fixe, incluse dans le dépôt : chaque nouvelle version
+    // s'installe par-dessus la précédente (les points placés sont conservés).
+    signingConfigs {
+        perso {
+            storeFile file('zwiftboard.keystore')
+            storePassword 'zwiftboard'
+            keyAlias 'zwiftboard'
+            keyPassword 'zwiftboard'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.perso
+        }
+        debug {
+            signingConfig signingConfigs.perso
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}

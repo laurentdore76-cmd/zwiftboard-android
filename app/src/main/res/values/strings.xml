@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZwiftBoard</string>
+    <string name="a11y_summary">Transforme les boutons des Zwift Click V2 en appuis sur l\'écran de MyWhoosh.</string>
+    <string name="a11y_description">ZwiftBoard simule un appui sur l\'écran, à l\'endroit que vous avez choisi, quand vous appuyez sur un bouton de vos Zwift Click V2. Il ne lit pas le contenu de l\'écran, sauf pour vérifier quelle appli est au premier plan si vous activez l\'option correspondante. Aucune donnée ne quitte l\'appareil.</string>
+</resources>
